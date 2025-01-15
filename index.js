@@ -8,7 +8,7 @@ require('./db/connection');
 
 const app = express();
 
-const allowedOrigins = ['http://localhost:4200']
+const allowedOrigins = ['http://localhost:4200', 'https://api-cha-zyan.vercel.app']
 
 app.use(bodyParser.json({ limit: '10mb' }));
 app.use(bodyParser.urlencoded({ limit: '10mb', extended: true }));
