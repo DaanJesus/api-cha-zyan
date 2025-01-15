@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const PresenceSchema = new mongoose.Schema({
-    email: { type: String, required: true },
+    whatsapp: { type: String, required: true },
     nome: { type: String, required: true },
     agregados: [{ nome: { type: String } }],
     createdAt: {
