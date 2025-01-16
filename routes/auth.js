@@ -3,15 +3,14 @@ const router = express.Router();
 const Presence = require('../models/presence');
 
 router.post('/confirm', async (req, res) => {
-    const { whatsapp, nome, agregados } = req.body;
+    const { nome, agregados } = req.body;
 
-    if (!whatsapp || !nome) {
+    if (!nome) {
         return res.status(400).json({ message: 'Preencha todos os campos e adicione ao menos um agregado' });
     }
 
     try {
         const confirmacao = new Presence({
-            whatsapp,
             nome,
             agregados
         });
